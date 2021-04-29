@@ -4,14 +4,14 @@ import { AddTodoForm } from './components/AddTodoForm';
 import './App.css';
 
 const initialTodos: Todo[] = [
-  {
-    text: 'Walk the dog',
-    complete: false,
-  },
-  {
-    text: 'Write app',
-    complete: true,
-  },
+  // {
+  //   text: 'Walk the dog',
+  //   complete: false,
+  // },
+  // {
+  //   text: 'Write app',
+  //   complete: true,
+  // },
 ];
 
 function App() {
@@ -37,6 +37,7 @@ function App() {
 
   return (
     <>
+      <h1>Todo-List</h1>
       <TodoList todos={todos} toggleTodo={toggleTodo} />
       <AddTodoForm addTodo={addTodo} />
     </>
