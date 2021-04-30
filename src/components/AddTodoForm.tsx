@@ -14,7 +14,13 @@ export const AddTodoForm: React.FunctionComponent<Props> = ({ addTodo }) => {
                 value={text}
                 onChange={e => {
                     e.preventDefault();
-                    setText(e.target.value);}}/>
+                    setText(e.target.value);}}
+                onKeyDown={e => {
+                    if(e.key === 'Enter') 
+                    {
+                        addTodo(text);
+                        setText('');
+                    }}}/>
             <button
                 type="button"
                 className="add_btn"

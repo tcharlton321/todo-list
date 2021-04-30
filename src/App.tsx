@@ -31,8 +31,11 @@ function App() {
   };
 
   const addTodo: AddTodo = (text: string) => {
-    const newTodo = { text, complete: false };
-    setTodos([...todos, newTodo]);
+    if(text != '')
+    {
+      const newTodo = { text, complete: false };
+      setTodos([...todos, newTodo]);
+    }
   };
 
 
