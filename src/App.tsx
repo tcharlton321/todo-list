@@ -35,10 +35,16 @@ function App() {
     setTodos([...todos, newTodo]);
   };
 
+
+  const closeTodo: CloseTodo = (closeTodo: Todo) => {
+    const newTodos = todos.filter(todo => todo !== closeTodo)
+    setTodos(newTodos);
+  };
+
   return (
     <>
       <h1>Todo-List</h1>
-      <TodoList todos={todos} toggleTodo={toggleTodo} />
+      <TodoList todos={todos} toggleTodo={toggleTodo} closeTodo={closeTodo}/>
       <AddTodoForm addTodo={addTodo} />
     </>
   );

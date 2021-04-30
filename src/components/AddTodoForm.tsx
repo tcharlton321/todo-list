@@ -17,6 +17,7 @@ export const AddTodoForm: React.FunctionComponent<Props> = ({ addTodo }) => {
                     setText(e.target.value);}}/>
             <button
                 type="button"
+                className="add_btn"
                 onClick={e => {
                 e.preventDefault();
                 addTodo(text);
